@@ -9,5 +9,10 @@
       "pattern": "traceyking.dev",
       "custom_domain": true
     }
-  ]
+  ],
+  "env": {
+    "production": {
+      
+    }
+  }
 }
