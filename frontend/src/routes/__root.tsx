@@ -17,6 +17,10 @@ export const Route = createRootRoute({
 			{
 				title: 'Tracey King',
 			},
+			{
+				name: 'description',
+				content: 'Tracey King\'s portfolio'
+			}
 		],
 		links: [
 			{

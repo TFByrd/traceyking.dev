@@ -7,25 +7,28 @@ const links = [
 	{
 		name: 'Email',
 		url: 'mailto:tracey.king@hey.com',
+		ariaLabel: 'Email Tracey',
 		internal: false,
 		icon: (
-			<Mail className="group-hover:stroke-gray-400 opacity-0 animate-fade-in-bottom animation-delay-500" />
+			<Mail className="group-hover:stroke-gray-400 opacity-[0.01] animate-fade-in-bottom animation-delay-500" />
 		),
 	},
 	{
 		name: 'LinkedIn',
 		url: 'https://www.linkedin.com/in/traceyking14',
+		ariaLabel: 'Visit Tracey\'s Linkedin',
 		internal: false,
 		icon: (
-			<LinkedinIcon className="h-[24px] w-[24px] opacity-0 group-hover:fill-gray-400 animate-fade-in-bottom animation-delay-600" />
+			<LinkedinIcon className="h-6 w-6 opacity-[0.01] group-hover:fill-gray-400 animate-fade-in-bottom animation-delay-600" />
 		),
 	},
 	{
 		name: 'GitHub',
 		url: 'https://github.com/TFByrd',
+		ariaLabel: 'Visit Tracey\'s Github',
 		internal: false,
 		icon: (
-			<GithubIcon className="h-[24px] w-[24px] opacity-0 group-hover:fill-gray-400 animate-fade-in-bottom animation-delay-700" />
+			<GithubIcon className="h-6 w-6 opacity-[0.01] group-hover:fill-gray-400 animate-fade-in-bottom animation-delay-700" />
 		),
 	},
 	// {
@@ -54,6 +57,7 @@ export const SocialLinks = () => {
 						className="group flex items-center border-black hover:cursor-pointer"
 						target="_blank"
 						rel="noreferrer"
+						aria-label={link.ariaLabel}
 						href={link.url}
 						key={link.name}
 					>
