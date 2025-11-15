@@ -1,5 +1,6 @@
 import { SocialLinks } from '@/features/home/social-links';
 import { createFileRoute } from '@tanstack/react-router';
+import Headshot from '@/assets/images/headshot.jpeg?w=150&h=150&format=webp&imagetools'
 
 export const Route = createFileRoute('/')({
 	component: App,
@@ -11,7 +12,7 @@ function App() {
 			<div className="flex flex-row">
 				<img
 					className="rounded-full grayscale h-25 z-1 animate-fade-in-left"
-					src="/headshot.jpeg"
+					src={Headshot}
 					alt="Headshot"
 				/>
 				<div className="ml-2 text-left flex flex-col justify-between [clip-path:border-box] [view-transition-name:container]">

@@ -4,6 +4,14 @@ import appCss from '../styles.css?url';
 import { Devtools } from '@/components/devtools';
 import { PostHog } from '@/components/posthog-provider';
 
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { SplitText } from 'gsap/SplitText';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(SplitText, useGSAP);
+}
+
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [
