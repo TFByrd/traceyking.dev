@@ -2,15 +2,9 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
 
 import appCss from '../styles.css?url';
 import { Devtools } from '@/components/devtools';
-import { PostHog } from '@/components/posthog-provider';
+import { lazy, Suspense } from 'react';
 
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { SplitText } from 'gsap/SplitText';
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(SplitText, useGSAP);
-}
+const PostHog = lazy(() => import('@/components/posthog-provider'));
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -55,7 +49,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 					{children}
 				<Devtools />
 				<Scripts />
-				<PostHog />
+				<Suspense>
+					<PostHog />
+				</Suspense>
 			</body>
 		</html>
 	);

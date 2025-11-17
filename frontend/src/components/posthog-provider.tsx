@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 
-export function PostHog() {
+function PostHog() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       import("posthog-js")
@@ -20,3 +20,5 @@ export function PostHog() {
 
   return null;
 }
+
+export default PostHog
