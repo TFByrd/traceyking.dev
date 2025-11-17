@@ -21,7 +21,7 @@ const config = defineConfig({
   ],
   ssr: {
     noExternal: ['posthog-js', '@posthog/react']
-  },
+  }
 })
 
 export default config
